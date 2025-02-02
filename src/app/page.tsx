@@ -1,101 +1,47 @@
-import Image from "next/image";
+import ImageToPdfConverter from "@/components/ImageToPdfConverter";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col max-w-screen max-h-screen">
+      <div className="flex w-full h-16 bg-pink-200">
+        <Navbar />
+      </div>
+      <div className="flex w-full h-full overflow-y-scroll hide-scrollbar bg-zinc-100">
+        <div className="flex flex-col w-full h-full gap-10 px-40 py-20">
+          <div className="flex w-full h-max py-3 items-center justify-center text-xl font-semibold">
+            Reformat a JPG, PNG, or other image to a PDF file in a few seconds.
+          </div>
+          <div className="flex w-full h-max">
+            <ImageToPdfConverter />
+          </div>
+          <div className="flex flex-col w-full h-max gap-3 items-center justify-center">
+            <span className="flex w-full items-center justify-center py-2 font-semibold text-lg">
+              How to Convert JPGs to PDF Free
+            </span>
+            <div className="flex lg:flex-row flex-col gap-4 w-full h-max items-center justify-between px-10 py-5">
+              <div className="flex gap-3 lg:w-1/3 w-full h-full items-center justify-center">
+                <div className="flex h-max border border-black rounded-full px-3 py-1 bg-slate-100">1</div>
+                <span className="text-sm">
+                  Select the JPGs you want to change to PDF, then add the images to our JPG to PDF converter for conversion.
+                </span>
+              </div>
+              <div className="flex gap-3 lg:w-1/3 w-full h-full items-center justify-center">
+                <div className="flex h-max border border-black rounded-full px-3 py-1 bg-slate-100">2</div>
+                <span className="text-sm">
+                  Our online JPG to PDF converter turns your images into multiple PDFs or a single merged PDF in seconds.
+                </span>
+              </div>
+              <div className="flex gap-3 lg:w-1/3 w-full h-full items-center justify-center">
+                <div className="flex h-max border border-black rounded-full px-3 py-1 bg-slate-100">3</div>
+                <span className="text-sm">
+                  Download your converted PDF files and save them to your computer. After converting your images to PDFs, all remaining files will be deleted from our servers.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
