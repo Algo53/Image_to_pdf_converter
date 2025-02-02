@@ -18,7 +18,7 @@ A simple **Next.js** application that converts **JPG, PNG, and other image forma
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/image-to-pdf.git
+   git clone https://github.com/Algo53/Image_to_pdf_converter.git
    cd image-to-pdf
 
 ## 🏗️ Tech Stack
